@@ -15,6 +15,11 @@ Crafted for an offensive security / ICS, IoT & firmware exploitation focus.
 
 ---
 
+⚠️
+_**NOTE:** Blog movement in progess.....
+[BLOG](https://dhaneshsivasamy07.gitbook.io/)_
+⚠️
+
 ### 🧬 Whoami
 
 ```bash

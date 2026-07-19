@@ -17,7 +17,7 @@
 
 <table>
 <tr>
-<td width="32%" align="center" valign="top">
+<td width="32%" align="center" valign="middle">
 
 <img src="./assets/0xdhanesh.png" width="280" alt="Shadow Monarch portrait of Dhanesh - lol " />
 

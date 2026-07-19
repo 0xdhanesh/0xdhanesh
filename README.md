@@ -9,8 +9,8 @@
 
 <p>
   <img src="https://badgen.net/badge/Product%20Security/Engineer/7C3AED?icon=hackthebox&amp;labelColor=111827&amp;scale=1.15" alt="Product Security Engineer" />
-  <img src="https://badgen.net/badge/Focus/ICS%20%7C%20IoT%20%7C%20Firmware/7C3AED?icon=linux&amp;labelColor=111827&amp;scale=1.15" alt="ICS, IoT and Firmware" />
-  <img src="https://badgen.net/badge/Location/World%20?icon=googlemaps&amp;labelColor=111827&amp;scale=1.15" alt="Bengaluru, India" />
+  <img src="https://badgen.net/badge/Focus/Offensive%20Security/7C3AED?icon=linux&amp;labelColor=111827&amp;scale=1.15" alt="ICS, IoT and Firmware" />
+  <img src="https://badgen.net/badge/Location/Earth%20?icon=googlemaps&amp;labelColor=111827&amp;scale=1.15" alt="Bengaluru, India" />
 </p>
 
 </div>
@@ -48,17 +48,8 @@
 <h2>🗡️ Featured Projects</h2>
 
 <p align="center">
-  <a href="https://github.com/0xdhanesh/hackthebox">
-    <img width="48%" src="https://github-readme-stats.vercel.app/api/pin/?username=0xdhanesh&repo=hackthebox&theme=midnight-purple&hide_border=true&description_lines_count=2" alt="hackthebox repository" />
-  </a>
-  <a href="https://github.com/0xdhanesh/pwntools_usage">
-    <img width="48%" src="https://github-readme-stats.vercel.app/api/pin/?username=0xdhanesh&repo=pwntools_usage&theme=midnight-purple&hide_border=true&description_lines_count=2" alt="pwntools_usage repository" />
-  </a>
-</p>
-
-<p align="center">
-  <a href="https://github.com/0xdhanesh/infosecBasics">
-    <img width="48%" src="https://github-readme-stats.vercel.app/api/pin/?username=0xdhanesh&repo=infosecBasics&theme=midnight-purple&hide_border=true&description_lines_count=2" alt="infosecBasics repository" />
+  <a title="Blood-Red Commander - Igiris - Network Monitoring" href="https://github.com/0xdhanesh/Igiris">
+    <img width="78%" src="./assets/README_IGIRIS.png" alt="hackthebox repository" />
   </a>
 </p>
 

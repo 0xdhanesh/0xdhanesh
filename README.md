@@ -1,17 +1,7 @@
-<!-- TOP SECTION: Profile Image + Stats Card side-by-side -->
-
-<table align="center">
-  <tr>
-    <td align="center" width="38%">
-      <a href="https://0xdhanesh.github.io/" title="Exchange">
-        <img src="./assets/preview.png" width="300" alt="Dhanesh Sivasamy — Shadow Monarch portrait" />
-      </a>
-    </td>
-    <td align="center" width="62%">
-      <img src="./assets/stats.svg" width="100%" alt="Dhanesh Sivasamy — Skills and stats screen" />
-    </td>
-  </tr>
-</table>
+<p align="center">
+  <a href="https://0xdhanesh.github.io/" title="Exchange"><img src="./assets/preview.png" width="28%" align="middle" alt="Dhanesh Sivasamy — Shadow Monarch portrait" /></a>&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="./assets/stats.svg" width="60%" align="middle" alt="Dhanesh Sivasamy — Skills and stats screen" />
+</p>
 
 <br />
 
@@ -23,8 +13,8 @@ I’m always interested in discussing and collaborating on offensive and defensi
 
 ### Currently Building
 
-* [Igiris](https://github.com/0xdhanesh/Igiris) — An automation-focused offensive security project.
-* [0xdhanesh Blog](https://0xdhanesh.github.io/) — Migrating older research and publishing new technical content.
+* [Igiris](https://github.com/0xdhanesh/Igiris) - An automation-focused offensive security project.
+* [0xdhanesh Blog](https://0xdhanesh.github.io/) - Migrating older research and publishing new technical content.
 
 ### Issues I’m Contributing To
 
@@ -35,8 +25,11 @@ I’m always interested in discussing and collaborating on offensive and defensi
 
 <!-- MIDDLE SECTION: Large Hero/Banner Image -->
 
+### Projects
+- Igiris and Iron
+
 <p align="center">
-  <a href="https://github.com/0xdhanesh/Igiris" title="Igiris — Blood-Red Commander">
+  <a href="https://github.com/0xdhanesh/Igiris" title="Igiris - Blood-Red Commander">
     <img src="./assets/0xdhanesh_featured_projects.png" width="600" alt="Igiris featured project — Shadow Monarch banner" />
   </a>
 </p>
@@ -50,6 +43,7 @@ I’m always interested in discussing and collaborating on offensive and defensi
 * **Professional Certifications:** OSCP, CREST CPSA, CREST CRT, Practical ICS Pentesting, and ICS/SCADA Protocol Traffic Analysis.
 * **CVE-2022-2912:** Reported a server-side request forgery vulnerability affecting a WordPress plugin.
 * **Oracle Security Recognition:** Reported an open-redirect vulnerability acknowledged in Oracle’s January 2022 advisory.
+* **TP-Link Acknowledgement:** Reported an issue on TP Link router employed network analsysis, Firmware Reversing and Hardware Pentests.
 * **Product Security Leadership:** Built and led a four-member product security team delivering end-to-end assessments across more than 10 ICS products.
 * **Enterprise Impact:** Identified a SharePoint ACL issue that exposed sensitive HR data belonging to more than 500 employees and helped drive remediation within three days.
 
@@ -58,7 +52,7 @@ I’m always interested in discussing and collaborating on offensive and defensi
 <!-- DROP DOWN FOR COMMUNITY ITEMS -->
 
 <details>
-  <summary><b>👥 Community Contributions</b> — Click to expand</summary>
+  <summary><b>👥 Community Contributions</b> - Click to expand</summary>
 
   <br />
 
@@ -83,12 +77,15 @@ I’m always interested in discussing and collaborating on offensive and defensi
   <a href="mailto:dhanesh.professional@gmail.com">
     <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Email Dhanesh Sivasamy" />
   </a>
+  <br />
   <a href="https://www.linkedin.com/in/dhanesh-sivasamy/">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="Dhanesh Sivasamy on LinkedIn" />
   </a>
+  <br />
   <a href="https://x.com/DhaneshSivasamy">
     <img src="https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white" alt="Dhanesh Sivasamy on X" />
   </a>
+  <br />
   <a href="https://dhaneshsivasamy07.gitbook.io/oscp-2022/">
     <img src="https://img.shields.io/badge/GitBook-3884FF?style=for-the-badge&logo=gitbook&logoColor=white" alt="Dhanesh Sivasamy's GitBook" />
   </a>

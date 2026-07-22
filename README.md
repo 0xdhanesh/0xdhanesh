@@ -18,7 +18,6 @@ I’m always interested in discussing and collaborating on offensive and defensi
 
 ### Issues I’m Contributing To
 
-* [Raspberry Pi Imager](https://github.com/raspberrypi/rpi-imager/issues/1669)
 * [Kali ARM](https://gitlab.com/kalilinux/build-scripts/kali-arm/-/work_items/343)
 
 ---

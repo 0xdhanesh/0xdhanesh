@@ -1,0 +1,187 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="380" viewBox="0 0 600 380" role="img" aria-labelledby="title desc">
+  <title id="title">Cybersecurity skill HUD</title>
+  <desc id="desc">A transparent blue and violet game-style HUD showing level, job, title, security skill progress and individual skills with proficiency values tailored to the user’s offensive and defensive security experience.</desc>
+
+  <defs>
+    <!-- More transparent glass, inspired by the referenced HUD. -->
+    <linearGradient id="glassBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#11102f" stop-opacity="0.27"/>
+      <stop offset="50%" stop-color="#140d3a" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#06172c" stop-opacity="0.30"/>
+    </linearGradient>
+
+    <linearGradient id="panelBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#133a63" stop-opacity="0.12"/>
+      <stop offset="55%" stop-color="#0a1e40" stop-opacity="0.065"/>
+      <stop offset="100%" stop-color="#231552" stop-opacity="0.10"/>
+    </linearGradient>
+
+    <linearGradient id="edgeStroke" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8a56ff" stop-opacity="0.55"/>
+      <stop offset="45%" stop-color="#00e7ff" stop-opacity="0.92"/>
+      <stop offset="100%" stop-color="#6f4cff" stop-opacity="0.48"/>
+    </linearGradient>
+
+    <linearGradient id="hpGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#008dff"/>
+      <stop offset="100%" stop-color="#16f4ff"/>
+    </linearGradient>
+
+    <linearGradient id="mpGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3158ff"/>
+      <stop offset="100%" stop-color="#00b8ff"/>
+    </linearGradient>
+
+    <pattern id="scanlines" width="8" height="8" patternUnits="userSpaceOnUse">
+      <path d="M0 7.5H8" stroke="#8deeff" stroke-width="0.45" stroke-opacity="0.05"/>
+    </pattern>
+
+    <filter id="cyanGlow" x="-25%" y="-70%" width="150%" height="240%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="2.2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="softGlow" x="-20%" y="-40%" width="140%" height="180%" color-interpolation-filters="sRGB">
+      <feGaussianBlur stdDeviation="1.15" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Rounded progress fills: 80% and 40% of 190px. -->
+    <clipPath id="hpClip"><rect x="60" y="122" width="152" height="8" rx="4"/></clipPath>
+    <clipPath id="mpClip"><rect x="280" y="122" width="76" height="8" rx="4"/></clipPath>
+
+    <style>
+      .ui { font-family: Inter, "Segoe UI", Arial, sans-serif; }
+      .skill-label { font-size: 11.2px; font-weight: 800; fill: #80eaff; }
+      .skill-value { font-size: 13px; font-weight: 850; fill: #ffffff; }
+      .skill-bonus { font-size: 10.5px; font-weight: 800; fill: #48ff6b; }
+      .skill-icon { fill: #31eaff; opacity: 0.9; }
+    </style>
+  </defs>
+
+  <g class="ui">
+    <!-- Transparent outer HUD shell -->
+    <rect x="10" y="10" width="580" height="360" rx="10" fill="url(#glassBg)" stroke="url(#edgeStroke)" stroke-width="1.4" filter="url(#softGlow)"/>
+    <rect x="14" y="14" width="572" height="352" rx="8" fill="url(#scanlines)" stroke="#7154d8" stroke-width="0.8" stroke-opacity="0.34"/>
+
+    <!-- Faint angular HUD accents -->
+    <path d="M22 82H106L119 90H245" fill="none" stroke="#705cff" stroke-width="0.8" stroke-opacity="0.20"/>
+    <path d="M355 90H482L495 82H578" fill="none" stroke="#00e7ff" stroke-width="0.8" stroke-opacity="0.20"/>
+    <path d="M20 353H150" fill="none" stroke="#8f5cff" stroke-width="0.8" stroke-opacity="0.20"/>
+    <path d="M450 353H580" fill="none" stroke="#00e7ff" stroke-width="0.8" stroke-opacity="0.20"/>
+
+    <!-- HEADER SECTION: original layout retained -->
+    <text x="132.8" y="55.5" font-size="34" font-weight="900" fill="#59eaff" text-anchor="middle" letter-spacing="2" filter="url(#cyanGlow)">57</text>
+    <text x="132.5" y="72.6" font-size="10" font-weight="700" fill="#9deeff" text-anchor="middle" letter-spacing="3">LEVEL</text>
+
+    <text x="330" y="45" font-size="11" font-weight="800" fill="#36dfff">JOB:</text>
+    <text x="362" y="45" font-size="11" font-weight="750" fill="#ffffff" filter="url(#softGlow)">Offensive Security Engineer</text>
+
+    <text x="330" y="62" font-size="10" font-weight="800" fill="#36dfff">TITLE:</text>
+    <text x="367" y="62" font-size="10" font-weight="650" fill="#b9f2ff">Senior Security Consultant</text>
+
+    <line x1="40" y1="89.5" x2="560" y2="89.5" stroke="#54eaff" stroke-width="0.8" stroke-opacity="0.22"/>
+
+    <!-- BARS HUD PANEL -->
+    <rect x="34" y="96" width="532" height="61" rx="2" fill="url(#panelBg)" stroke="#65eaff" stroke-width="0.9" stroke-opacity="0.54" filter="url(#softGlow)"/>
+    <rect x="38" y="100" width="524" height="53" rx="1" fill="none" stroke="#8066ff" stroke-width="0.55" stroke-opacity="0.20"/>
+
+    <!-- Offensive Security: 52428 / 65535 = 80% -->
+    <text x="60" y="115" font-size="11" font-weight="800" fill="#7eeeff">+ Offensive Security Skills</text>
+    <rect x="60" y="122" width="190" height="8" rx="4" fill="#061b35" fill-opacity="0.72" stroke="#3acfff" stroke-width="0.55" stroke-opacity="0.55"/>
+    <rect x="60" y="122" width="190" height="8" fill="url(#hpGrad)" clip-path="url(#hpClip)" filter="url(#softGlow)"/>
+    <path d="M64 124H207" stroke="#ffffff" stroke-width="0.7" stroke-linecap="round" stroke-opacity="0.48"/>
+    <text x="155" y="143" font-size="9" font-weight="650" fill="#b9f4ff" text-anchor="middle">52428 / 65535</text>
+
+    <!-- Defensive Security: 26214 / 65535 = 40% -->
+    <text x="280" y="115" font-size="11" font-weight="800" fill="#6dcfff">+ Defensive Security Skills</text>
+    <rect x="280" y="122" width="190" height="8" rx="4" fill="#061b35" fill-opacity="0.72" stroke="#368cff" stroke-width="0.55" stroke-opacity="0.55"/>
+    <rect x="280" y="122" width="190" height="8" fill="url(#mpGrad)" clip-path="url(#mpClip)" filter="url(#softGlow)"/>
+    <path d="M284 124H351" stroke="#ffffff" stroke-width="0.7" stroke-linecap="round" stroke-opacity="0.42"/>
+    <text x="375" y="143" font-size="9" font-weight="650" fill="#b9f4ff" text-anchor="middle">26214 / 65535</text>
+
+    <text x="520" y="116" font-size="8.5" font-weight="800" fill="#73e8ff" text-anchor="middle" letter-spacing="0.8">FATIGUE</text>
+    <text x="520" y="137" font-size="15" font-weight="900" fill="#ffffff" text-anchor="middle" filter="url(#softGlow)">0</text>
+
+    <!-- SKILLS HUD PANEL -->
+    <rect x="34" y="166" width="532" height="184" rx="2" fill="url(#panelBg)" stroke="#65eaff" stroke-width="0.9" stroke-opacity="0.54" filter="url(#softGlow)"/>
+    <rect x="38" y="170" width="524" height="176" rx="1" fill="none" stroke="#8066ff" stroke-width="0.55" stroke-opacity="0.20"/>
+    <line x1="300" y1="177" x2="300" y2="340" stroke="#66ddff" stroke-width="0.55" stroke-opacity="0.12"/>
+
+    <!-- Uniform left column -->
+    <g transform="translate(0 193)">
+      <path class="skill-icon" d="M48 -6H60L64 0L60 6H48L44 0Z"/>
+      <text class="skill-label" x="70" y="0" dominant-baseline="middle">Web API Pentesting:</text>
+      <text class="skill-value" x="236" y="0" text-anchor="end" dominant-baseline="middle">248</text>
+      <text class="skill-bonus" x="244" y="0" dominant-baseline="middle">(+70)</text>
+    </g>
+    <g transform="translate(0 224)">
+      <path class="skill-icon" d="M48 -6H60L64 0L60 6H48L44 0Z"/>
+      <text class="skill-label" x="70" y="0" dominant-baseline="middle">iOS/Android:</text>
+      <text class="skill-value" x="236" y="0" text-anchor="end" dominant-baseline="middle">245</text>
+      <text class="skill-bonus" x="244" y="0" dominant-baseline="middle">(+66)</text>
+    </g>
+    <g transform="translate(0 255)">
+      <path class="skill-icon" d="M48 -6H60L64 0L60 6H48L44 0Z"/>
+      <text class="skill-label" x="70" y="0" dominant-baseline="middle">Fuzzing:</text>
+      <text class="skill-value" x="236" y="0" text-anchor="end" dominant-baseline="middle">246</text>
+      <text class="skill-bonus" x="244" y="0" dominant-baseline="middle">(+72)</text>
+    </g>
+    <g transform="translate(0 286)">
+      <path class="skill-icon" d="M48 -6H60L64 0L60 6H48L44 0Z"/>
+      <text class="skill-label" x="70" y="0" dominant-baseline="middle">Exploit Development:</text>
+      <text class="skill-value" x="236" y="0" text-anchor="end" dominant-baseline="middle">240</text>
+      <text class="skill-bonus" x="244" y="0" dominant-baseline="middle">(+68)</text>
+    </g>
+    <g transform="translate(0 317)">
+      <path class="skill-icon" d="M48 -6H60L64 0L60 6H48L44 0Z"/>
+      <text class="skill-label" x="70" y="0" dominant-baseline="middle">Anime:</text>
+      <text class="skill-value" x="236" y="0" text-anchor="end" dominant-baseline="middle">9000+</text>
+      <text class="skill-bonus" x="244" y="0" dominant-baseline="middle">(+99)</text>
+    </g>
+
+    <!-- Uniform right column -->
+    <g transform="translate(0 193)">
+      <path class="skill-icon" d="M310 -6H322L326 0L322 6H310L306 0Z"/>
+      <text class="skill-label" x="332" y="0" dominant-baseline="middle">Reverse Engineering:</text>
+      <text class="skill-value" x="502" y="0" text-anchor="end" dominant-baseline="middle">248</text>
+      <text class="skill-bonus" x="510" y="0" dominant-baseline="middle">(+75)</text>
+    </g>
+    <g transform="translate(0 224)">
+      <path class="skill-icon" d="M310 -6H322L326 0L322 6H310L306 0Z"/>
+      <text class="skill-label" x="332" y="0" dominant-baseline="middle">Source Code Analysis:</text>
+      <text class="skill-value" x="502" y="0" text-anchor="end" dominant-baseline="middle">224</text>
+      <text class="skill-bonus" x="510" y="0" dominant-baseline="middle">(+50)</text>
+    </g>
+    <g transform="translate(0 255)">
+      <path class="skill-icon" d="M310 -6H322L326 0L322 6H310L306 0Z"/>
+      <text class="skill-label" x="332" y="0" dominant-baseline="middle">HW/IoT/ICS Pentest:</text>
+      <text class="skill-value" x="502" y="0" text-anchor="end" dominant-baseline="middle">250</text>
+      <text class="skill-bonus" x="510" y="0" dominant-baseline="middle">(+78)</text>
+    </g>
+    <g transform="translate(0 286)">
+      <path class="skill-icon" d="M310 -6H322L326 0L322 6H310L306 0Z"/>
+      <text class="skill-label" x="332" y="0" dominant-baseline="middle">Presentation Skills:</text>
+      <text class="skill-value" x="502" y="0" text-anchor="end" dominant-baseline="middle">244</text>
+      <text class="skill-bonus" x="510" y="0" dominant-baseline="middle">(+70)</text>
+    </g>
+
+    <!-- Available points occupies the matching fifth-row area -->
+    <g transform="translate(500 316)">
+      <text x="0" y="-3" font-size="8" font-weight="800" fill="#66ddff" text-anchor="middle" letter-spacing="0.6">AVAILABLE POINTS</text>
+      <text x="0" y="18" font-size="18" font-weight="900" fill="#ffffff" text-anchor="middle" filter="url(#softGlow)">38</text>
+    </g>
+
+    <!-- Corner brackets -->
+    <path d="M10 26V10H26" fill="none" stroke="#60eaff" stroke-width="2.4" stroke-opacity="0.85"/>
+    <path d="M590 26V10H574" fill="none" stroke="#60eaff" stroke-width="2.4" stroke-opacity="0.85"/>
+    <path d="M10 354V370H26" fill="none" stroke="#60eaff" stroke-width="2.4" stroke-opacity="0.85"/>
+    <path d="M590 354V370H574" fill="none" stroke="#60eaff" stroke-width="2.4" stroke-opacity="0.85"/>
+  </g>
+</svg>
